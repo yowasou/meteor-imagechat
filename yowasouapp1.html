@@ -1,0 +1,21 @@
+﻿<head>
+  <title>画像アップローダー</title>
+</head>
+
+<body>
+  {{> main}}
+</body>
+
+
+<template name="main">
+    <div>
+    アップロード：<input id="file_select" type="file" multiple="multiple" /><button id="fileupload" class="fileupload">アップロード開始</button>
+    <p />
+    </div>
+    <button id="allclear" class="allclear">全消し</button>
+    {{#each images}}
+       <div>
+         <img src='{{image_binary}}' alt='' /> 
+       <div/>
+    {{/each}}
+</template>
